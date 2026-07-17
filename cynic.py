@@ -131,7 +131,7 @@ from rich.console import Console
 from rich.markdown import CodeBlock, Markdown
 from rich.syntax import Syntax
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 HOME = "cynic/"  # Trailing slash to generate a unique home.
 DEFAULT_TIMEOUT = 10.0
