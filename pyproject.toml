@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyphal-cynic"
+dynamic = ["version"]
+requires-python = ">=3.11"
+description = "Cyphal Network Investigation Console -- a minimal CLI for inspecting and exercising Cyphal networks."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Pavel Kirienko", email = "pavel@opencyphal.org" }]
+keywords = [
+    "cyphal",
+    "opencyphal",
+    "pubsub",
+    "cli",
+    "diagnostics",
+    "vehicular",
+    "avionics",
+    "communication-protocol",
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Embedded Systems",
+    "Topic :: System :: Networking",
+]
+dependencies = [
+    "pycyphal2[udp,pythoncan]>=2.0.0.dev5",
+    "pydsdl==1.25.0rc1",
+    "PyYAML~=6.0",
+    "coloredlogs~=15.0",
+    "pyserial~=3.5",
+    "rich~=14.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest~=9.0"]
+
+[project.urls]
+Homepage = "https://opencyphal.org"
+Repository = "https://github.com/OpenCyphal/yakut"
+
+[project.scripts]
+cynic = "cynic:main"
+cn = "cynic:main"
+
+[tool.setuptools]
+py-modules = ["cynic"]
+
+[tool.setuptools.dynamic]
+version = { attr = "cynic.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-v"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["cynic.py", "tests"]
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
