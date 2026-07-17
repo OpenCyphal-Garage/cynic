@@ -1,14 +1,26 @@
-# Cynic
+<div align="center">
+
+<img src="https://opencyphal.org/favicon-192.png" width="60px">
+
+<h1>Cynic</h1>
+
+_Cyphal Network Investigation Console_
 
 [![PyPI](https://img.shields.io/pypi/v/cyphal-cynic?logo=pypi&color=ffff00)](https://pypi.org/project/cyphal-cynic/)
 [![Forum](https://img.shields.io/discourse/https/forum.opencyphal.org/users.svg?logo=discourse&color=1700b3)](https://forum.opencyphal.org)
 
-Cynic (Cyphal Network Investigation Console) is a simple command-line tool for inspecting and exercising
+</div>
+
+---
+
+Cynic is a simple command-line tool for inspecting and exercising
 [Cyphal](https://opencyphal.org) networks.
 
 Cynic is built for use with Cyphal v1.1, which introduces named topics.
 It is fully interoperable with Cyphal/CAN v1.0 via pinned topics, where the topic name is constructed from its
 subject-ID, like `1234#1234`.
+
+<img src="hero.png" width="900px">
 
 ## Usage
 
